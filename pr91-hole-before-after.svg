@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" role="img" aria-labelledby="title desc">
+<title id="title">Spherical polygon clipping before and after PR #91</title>
+<desc id="desc">Same analytic polygon and equatorial line rendered through the base and PR #91 public clipping implementations. The base draws across the hole; PR #91 leaves the hole interval blank.</desc>
+<style>text{font:14px sans-serif;fill:#17212b}.panel{fill:#fafafa;stroke:#aab4be}.allowed{fill:#d9f0df;fill-rule:evenodd;stroke:#287a45;stroke-width:1.5}.hole{fill:#fff;stroke:#bd4d4d;stroke-dasharray:4 3}.line{fill:none;stroke:#1459a6;stroke-width:4;stroke-linecap:round}.tick{stroke:#17212b;stroke-width:1}.sub{font-size:12px;fill:#46515c}</style>
+<text x="220" y="22" text-anchor="middle" font-weight="bold">Same spherical fixture · same equirectangular view</text>
+<g transform="translate(0,0)"><rect class="panel" x="10" y="35" width="205" height="195" rx="5"/><text x="112.5" y="58" text-anchor="middle" font-weight="bold">Base</text>
+<path class="allowed" d="M40,200L40,60L180,60L180,200ZM92.5,147.5L127.5,147.5L127.5,112.5L92.5,112.5Z"/>
+<path class="hole" d="M92.5,147.5L127.5,147.5L127.5,112.5L92.5,112.5Z"/>
+<path class="line" d="M40,130L180,130"/>
+<path class="tick" d="M40,170v6 M92.5,170v6 M127.5,170v6 M180,170v6"/>
+<text class="sub" x="40" y="192" text-anchor="middle">−20°</text><text class="sub" x="92.5" y="192" text-anchor="middle">−5°</text><text class="sub" x="127.5" y="192" text-anchor="middle">+5°</text><text class="sub" x="180" y="192" text-anchor="middle">+20°</text>
+<text class="sub" x="112.5" y="205" text-anchor="middle">blue = clipped input line · red box = hole</text></g>
+<g transform="translate(215,0)"><rect class="panel" x="225" y="35" width="205" height="195" rx="5"/><text x="327.5" y="58" text-anchor="middle" font-weight="bold">PR #91</text>
+<path class="allowed" d="M40,200L40,60L180,60L180,200ZM92.5,147.5L127.5,147.5L127.5,112.5L92.5,112.5Z"/>
+<path class="hole" d="M92.5,147.5L127.5,147.5L127.5,112.5L92.5,112.5Z"/>
+<path class="line" d="M40,130L92.5,130M127.5,130L180,130"/>
+<path class="tick" d="M40,170v6 M92.5,170v6 M127.5,170v6 M180,170v6"/>
+<text class="sub" x="40" y="192" text-anchor="middle">−20°</text><text class="sub" x="92.5" y="192" text-anchor="middle">−5°</text><text class="sub" x="127.5" y="192" text-anchor="middle">+5°</text><text class="sub" x="180" y="192" text-anchor="middle">+20°</text>
+<text class="sub" x="327.5" y="205" text-anchor="middle">blue = clipped input line · red box = hole</text></g>
+</svg>
